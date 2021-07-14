@@ -1,0 +1,41 @@
+<div *ngFor="let dataitem of ClinicList">
+
+<div class="card" >
+  <div class="card-img-wrapper" >
+    <img *ngIf="dataitem.Image" class="card-img-top" src="assets/images/{{dataitem.Image}}">
+    <img *ngIf="!dataitem.Image" class="card-img-top" src="assets/images/clinic.jpg">
+    <ul *ngIf="!hideIcons" class="list-inline text-center member-icons animate">
+      <li class="list-inline-item">
+        <button class="btn btn-primary" routerLink="/property-detail/{{dataitem.Id}}"><i class="far fa-edit"></i></button>
+      </li>
+      <li class="list-inline-item">
+        <button class="btn btn-primary"><i class="far fa-address-book"></i></button>
+      </li>
+    </ul>
+
+  </div>
+  <div class="card-body p-1">
+    <h3 class="mb-0"> {{dataitem.name}} </h3>
+
+
+    <span > Email: {{dataitem.email}}</span>  <span><br>Phone : {{dataitem.Phone}}
+</span>
+
+
+    <hr class="mt-0 mb-2">
+
+    <h6 class="mb-0"> <span >Location :{{dataitem.Country}}</span><span >-{{dataitem.City}}</span><br>
+      <span >{{dataitem.Street}} Street-</span><span>Building:{{dataitem.Building}}</span><span>PartmentNum:{{dataitem.PartmentNum}}  </span> </h6>
+
+</div>
+</div>
+
+</div>
+
+
+
+
+
+
+
+

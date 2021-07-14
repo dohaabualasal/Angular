@@ -1,0 +1,40 @@
+<div class="main-content">
+  <div class="container-fluid">
+    <div class="card">
+        <div class="card-header card-header-danger">
+            <h4 class="card-title" style="color: aliceblue;">Add Doctor </h4>
+        </div>
+        <div class="card-body">
+            <table class="table table-hover">
+                                
+                <tr>
+                  <th>Id</th>
+                  <th>
+                    Name
+                  </th>
+                  <th>Email</th>
+  
+                  <th>Phone</th>
+                  
+                  <th>Clinic Id </th>
+                </tr>
+               
+                <tbody>
+                <tr *ngFor="let dataitem of Doctors">
+                    <th>{{dataitem.Id}}</th>
+                  <td>{{dataitem.Name}}</td>
+                  <td>{{dataitem.Email}}</td>
+                  <td>{{dataitem.Phone}}</td>
+                  <td><a href="http://localhost:4200/property-detail/{{dataitem.ClinicId}}"> Show Clinic Info {{dataitem.ClinicId}}</a></td>
+                  
+                  
+  
+  
+                </tr>
+              </tbody>
+              </table>  
+
+
+        </div>
+    </div>
+</div>

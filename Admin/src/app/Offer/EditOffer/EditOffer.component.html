@@ -1,0 +1,62 @@
+<div class="d-flex flex-row bd-highlight mb-3">
+
+  <div class="form-froup row" style="width: 60%;">
+
+    <div class="card-body">
+
+
+      <label> Name</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" [(ngModel)]="Name" placeholder="Enter"     >
+      </div>
+      <div class="col-sm-10">
+        Old price
+        <input type="nuber" class="form-control" [(ngModel)]="OldPrice" placeholder="Enter Pet Name"
+          [(ngModel)]="propertyView.OldPrice">
+      </div>
+      <div class="col-sm-10">
+        New Price
+        <input type="number" class="form-control" [(ngModel)]="NewPrice" [(ngModel)]="propertyView.NewPrice"
+          placeholder="Ente NewPrice">
+      </div>
+      <div class="col-sm-10">
+        DateFrom
+        <input type="date" class="form-control" [(ngModel)]="DateFrom" placeholder="DateFrom" [(ngModel)]="propertyView.DateFrom">
+      </div>
+      <div class="col-sm-10">
+        DateTo
+        <input type="date" class="form-control" [(ngModel)]="DateTo" placeholder="DateTo" [(ngModel)]="propertyView.DateTo">
+      </div>
+      <label class="col-sm-2 col-form-label">Category</label>
+      <div class="col-sm-10">
+        <select class="form-control" [(ngModel)]="Categories" (change)="selectChange()" >
+          <option>--Select--</option>
+          <option *ngFor="let depName of Categories" [value]="depName.CategoryType" >
+            {{depName.CategoryType}}
+          </option>
+        </select>
+
+      </div>
+
+
+
+
+
+
+</div>
+
+  </div>
+  <div class="ml-3 bd-highlight" style="width: 40%;">
+  <img [src]=PhotoFilePath height="250px;" width="200px;">
+  <input type="file" (change)="uploadPhoto($event)" class="mt-2"/>
+  </div>
+  </div>
+
+
+  <!-- <button (click)="addEmployee()" *ngIf="emp.EmployeeId==0" class="btn btn-primary">
+      Add
+  </button> -->
+
+  <button (click)="update()"  class="btn btn-primary">
+      Update
+  </button>

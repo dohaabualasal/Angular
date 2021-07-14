@@ -1,0 +1,33 @@
+
+
+<table class="table table-hover">
+  <thead>
+    <th>Id</th>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Phone</th>
+    <th>City</th>
+  </thead>
+  <tbody>
+  <tr *ngFor="let Clinic of ClinicList">
+    <td (click)="populateForm(Clinic)">{{Clinic.Id}}
+
+    <td (click)="populateForm(Clinic)">{{Clinic.Name}}</td>
+    <td (click)="populateForm(Clinic)">{{Clinic.Email}}</td>
+
+    <td (click)="populateForm(Clinic)">{{Clinic.Phone}}</td>
+    <td (click)="populateForm(Clinic)">{{Clinic.City}}</td>
+    <td (click)="populateForm(Clinic)">{{Clinic.Country}}</td>
+
+    <td (click)="populateForm(Clinic)">{{Clinic.Street}}</td>
+    <td (click)="populateForm(Clinic)">{{Clinic.Building}}</td>
+    <td (click)="populateForm(Clinic)">{{Clinic.PartmentNumber}}</td>
+    <td><button (click)="onDelete(Clinic.Id)" class="btn btn-sm btn-danger">Delete</button></td>
+    <td><button routerLink="/Add-Doctor/{{Clinic.Id}}" class="btn btn-sm btn-outline-success">Add Doctor</button></td>
+    <td><button routerLink="/Add-Pet/{{Clinic.Id}}" class="btn btn-sm btn-outline-success">Add pets</button> </td>
+    <td><button routerLink="/Reservation/{{Clinic.Id}}" class="btn btn-sm btn-outline-success">Reservation</button> </td>
+
+
+  </tr>
+</tbody>
+</table>

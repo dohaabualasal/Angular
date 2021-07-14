@@ -1,0 +1,78 @@
+<app-admin-nav></app-admin-nav>
+
+
+<div class="container">
+  <app-admin-nav></app-admin-nav>
+
+  <div class="row mb-5" style="margin-left: 30; margin-top: 100px;">
+  <div class="col-8 shadow-lg p-0 bg-white">
+    <div class="card">
+      <div class="card-header">
+        <h3>Trust us, we will be as you wish</h3>
+      </div>
+      <div class="card-body">
+
+          <div class="col-sm-12">
+            <h4>Doctors:</h4>
+            <input [(ngModel)]='Name' placeholder="Filter Name ">
+            <button type="button" (click)="onFilter()">Search</button>
+            <button type="button" (click)="onFilterClear()">Clear</button> &nbsp;
+            <label>Filter Date : &nbsp; </label>
+            <input [(ngModel)]='Date' type="date" >
+            <button type="button" (click)="onFilter2()">Search</button>
+            <button type="button" (click)="onFilterClear()">Clear</button> &nbsp;
+
+           <!-- <label>Sort by &nbsp;</label>
+
+             <select [(ngModel)]='SortbyParam'>
+              <option value="ScehdualDate">Date</option>
+            </select> -->
+            <button type="button" (click)="onSortDirection()">
+              <i *ngIf="SortDirection==='asc'" class="fas fa-sort-alpha-down"></i>
+              <i *ngIf="SortDirection==='desc'" class="fas fa-sort-alpha-up"></i>
+            </button>
+            <div class="heading">
+              <table class="table table-hover">
+                <thead class="thead-dark">
+                <tr>
+                  <th>Doctor Name </th>
+                  <th>Customer</th>
+                  <th>
+                    Email
+                  </th>
+                  <th>Phone</th>
+
+                  <th>Date</th>
+<th>Action</th>                </tr>
+                </thead>
+                <tbody>
+                <tr *ngFor="let dataitem of Reservation|filter:SearchName:'Name1'|dateFilter:searchDate:'ScehdualDate'|sort:['ScehdualDate',SortDirection]">
+                  <td>{{dataitem.Name1}}</td>
+                  <td>{{dataitem.Name}}</td>
+                  <td>{{dataitem.Email}}</td>
+                  <td>{{dataitem.Phone}}</td>
+                
+                  <td>{{dataitem.ScehdualDate}}</td>
+                  <td><button (click)="Delete(dataitem.Id)" class="btn btn-sm btn-outline-danger">Delete</button></td>
+
+
+                </tr>
+              </tbody>
+              </table>
+            </div>
+          </div>
+
+
+          </div>
+          </div>
+         </div>
+
+
+<div class="col-4">
+ 
+
+    <img  class="col-2000 shadow-lg p-0 bg-white" src="assets/sferfre.jpg" style="border: aliceblue;border-top: aliceblue;border:solid;">
+ 
+
+</div>
+

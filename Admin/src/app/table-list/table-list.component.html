@@ -1,0 +1,60 @@
+<div class="container">
+
+    <div class="main-content">
+      <div class="container">
+        
+       
+          <div class="row" style="font-size: large;">
+           
+            <label>Filter Date : &nbsp; </label>
+            <!-- <input [(ngModel)]='Date' type="date" > -->
+            <button type="button" (click)="onFilter2()">Search</button>
+            <button type="button" (click)="onFilterClear()">Clear</button> &nbsp;
+            <button type="button" (click)="onSortDirection()">
+             <i *ngIf="SortDirection==='asc'" class="fas fa-sort-alpha-down"></i>
+             <i *ngIf="SortDirection==='desc'" class="fas fa-sort-alpha-up"></i>
+           </button>
+              <div class="container" >
+                  <div class="card">
+                      <div class="card-header card-header-success">
+                        <h4>Sales</h4>
+                          <div *ngFor="let dataitem of Profit" style="font-size: x-large;">
+                            Your profit right now  <span style="color:blanchedalmond;">{{dataitem.Profit}}</span>   JD 
+                           </div>
+                         </div>
+                            <table class="table table-hover">
+                                
+                                <tr>
+                                  
+                                  <th>
+                                    PetId
+                                  </th>
+                                  <th>Contact</th>
+                  
+                                  <th>Date</th>
+                                </tr>
+                               
+                                <tbody>
+                                <tr *ngFor="let dataitem of Sales">
+                                  <td>{{dataitem.PetId}}</td>
+                                  <td>{{dataitem.PhoneNumber}}</td>
+                                  <td>{{dataitem.Date}}</td>
+                                  
+                  
+                  
+                                </tr>
+                              </tbody>
+                              </table>                          </div>
+                      </div>
+                      
+                  </div>
+                 
+              </div>
+          </div>
+      </div>
+
+    
+    
+    
+    
+

@@ -1,0 +1,38 @@
+
+<main class="login-form">
+  <div class="cotainer">
+      <div class="row justify-content-center">
+          <div class="col-md-8">
+              <div class="card">
+                  <div class="card-header">Register</div>
+                  <div class="card-body">
+                      <form  #loginForm='ngForm' (ngSubmit)="onLogin(loginForm)">
+                          <div class="form-group row">
+                              <label for="email_address" class="col-md-4 col-form-label text-md-right" >User Name</label>
+                              <div class="col-md-6">
+                                  <input  required type="text"  ngModel class="form-control" name="email" required autofocus>
+                              </div>
+                          </div>
+<br>
+                          <div class="form-group row">
+                              <label for="password" class="col-md-4 col-form-label text-md-right">Password</label>
+                              <div class="col-md-6">
+                                  <input required type="password" id="password" ngModel class="form-control" name="password" required>
+                              </div>
+                          </div>
+<br>
+
+
+                          <div class="col-md-6 offset-md-4">
+                              <button type="submit"  [disabled]="!loginForm.valid" class="btn btn-primary form-control">
+                                  Login
+                              </button>
+
+                          </div>
+
+                  </form>
+              </div>
+          </div>
+      </div>
+  </div>
+  </div>

@@ -1,0 +1,65 @@
+
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-light fixed-top">
+  <div class="container-fluid">
+    <a class="navbar-brand" routerLink="/home">Keep a pet</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+        <li class="nav-item">
+          <a class="nav-link" [routerLinkActiveOptions]="{exact:true}" routerLinkActive=active routerLink="/Property-list">Clinics</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" [routerLinkActiveOptions]="{exact:true}" routerLinkActive=active routerLink="/List-Offer">Offers</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLinkActiveOptions]="{exact:true}" routerLinkActive=active routerLink="/AboutUs">About Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLinkActiveOptions]="{exact:true}" routerLinkActive=active routerLink="/testomonial">Testomonial </a>
+        </li>
+      </ul>
+     <ul class="nav nav-bar" style="margin-left:500px">
+       <li class="nav-item">
+         <a  class="nav-link text-dark"routerLink="/register"  *ngIf="!Loggedin()" routerLinkActive="active">Register</a>
+
+
+       </li>
+       <li class="nav-item">
+         <a class="nav-link text-dark" *ngIf="!Loggedin()" routerLink="/login" >Login</a>
+
+       </li>
+      <!-- <li class="nav-item">
+        <a class="nav-link text-light" *ngIf="Loggedin()" (click)="onLogout()" routerLink="/login" >logOut</a>
+
+      </li>-->
+
+
+      <div class="btn-group" dropdown *ngIf="Loggedin()" >
+        <button type="button" class="btn btn-info" >Welcom {{LoggedInUser}}</button>
+        <button id="button-split" type="button" dropdownToggle class="btn btn-info dropdown-toggle dropdown-toggle-split"
+                aria-controls="dropdown-split">
+          <span class="caret"></span>
+          <span class="sr-only">Split button!</span>
+        </button>
+        <ul id="dropdown-split" *dropdownMenu class="dropdown-menu"
+            role="menu" aria-labelledby="button-split">
+          <li role="menuitem"><a class="dropdown-item" href="#"><i class="fas fa-tachometer-alt"></i>View Dashboard</a></li>
+          <li role="menuitem"><a class="dropdown-item" href="#"><i class="far fa-user-circle"></i>View Profile</a>
+          </li>
+          <li role="menuitem"><a class="dropdown-item" href="#">  <i class="fas fa-key"></i>Change password
+            </a></li>
+          <li class="divider dropdown-divider"></li>
+          <li role="menuitem"><a class="dropdown-item" href="#" (click)="onLogout()"><i class="fas fa-sign-out-alt"></i>Log Out</a>
+          </li>
+        </ul>
+      </div>
+
+     </ul>
+    </div>
+  </div>
+</nav>

@@ -1,0 +1,143 @@
+.ng-invalid.ng-touched
+{
+border-color:red;
+}
+.error-block
+{
+color:red;
+}
+.photo-control {
+  min-height: 300px;
+  vertical-align: middle;
+  text-align: center;
+  border: 1px dashed blue;
+  margin: 5px;
+}
+.ng-invalid.ng-touched {
+  border-color: red;
+}
+
+.error-block {
+  color: red;
+}
+
+.btn-group > label[ng-reflect-btn-radio] {
+  border-radius: 44px;
+  padding: 0 15px;
+  line-height: 30px;
+}
+
+.tab-panel {
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 4px;
+  min-height: 600px;
+  background-color: white;
+}
+
+.nav-tabs > li.open, .member-tabset > .nav-tabs > li:hover {
+  border-bottom: 4px solid #e1e2eb;
+}
+
+.member-tabset > .nav-tabs > li.open > a, .member-tabset > .nav-tabs > li:hover > a {
+  border: 0;
+  background: none !important;
+  color: #333333;
+}
+
+.member-tabset > .nav-tabs > li.open > a > i, .member-tabset > .nav-tabs > li:hover > a > i {
+  color: #a6a6a6;
+}
+
+.member-tabset > .nav-tabs > li.open .dropdown-menu, .member-tabset > .nav-tabs > li:hover .dropdown-menu {
+  margin-top: 0px;
+}
+
+.member-tabset > .nav-tabs > li.active {
+  border-bottom: 4px solid #0069d9;
+  position: relative;
+}
+
+.member-tabset > .nav-tabs > li.active > a {
+  border: 0 !important;
+  color: #333333;
+}
+
+.member-tabset > .nav-tabs > li.active > a > i {
+  color: #404040;
+}
+
+.member-tabset > .tab-content {
+  margin-top: -3px;
+  background-color: #fff;
+  border: 0;
+  border-top: 1px solid #eee;
+  padding: 15px 0;
+}
+.ng-invalid.ng-touched {
+  border-color: red;
+}
+
+.error-block {
+  color: red;
+}
+
+.btn-group > label[ng-reflect-btn-radio] {
+  border-radius: 44px;
+  padding: 0 15px;
+  line-height: 30px;
+}
+
+.card {
+  min-height: 400px;
+}
+
+.card-body h1 {
+  font-family: fantasy;
+  color: #0069d9;
+}
+
+.font-highlight {
+  font-style: italic;
+  color: red;
+}
+
+.card-img-wrapper{
+  overflow: hidden;
+  position: relative;
+}
+
+.card:hover img{
+  transform: scale(1.2,1.2);
+  transition-duration: 500ms;
+  transition-timing-function: ease-out;
+  height: 250px;
+  opacity: .7;
+}
+
+.card img{
+  transform: scale(1,1);
+  transition-duration: 500ms;
+  transition-timing-function: ease-out;
+  height: 250px
+}
+
+.member-icons{
+  position: absolute;
+  bottom: -10%;
+  left: 0;
+  right: 0;
+  margin-right: auto;
+  margin-left: auto;
+  opacity: 0;
+}
+
+.card-img-wrapper:hover .member-icons{
+  bottom: 0;
+  opacity: 1;
+}
+
+.animate{
+  transition: all 0.3s ease-in-out;
+}
+

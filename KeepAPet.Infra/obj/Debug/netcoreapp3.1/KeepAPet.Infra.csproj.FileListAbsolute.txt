@@ -1,0 +1,12 @@
+C:\HSPA\KeepAPet.Infra\bin\Debug\netcoreapp3.1\KeepAPet.Infra.deps.json
+C:\HSPA\KeepAPet.Infra\bin\Debug\netcoreapp3.1\KeepAPet.Infra.dll
+C:\HSPA\KeepAPet.Infra\bin\Debug\netcoreapp3.1\KeepAPet.Infra.pdb
+C:\HSPA\KeepAPet.Infra\bin\Debug\netcoreapp3.1\KeepAPet.Core.dll
+C:\HSPA\KeepAPet.Infra\bin\Debug\netcoreapp3.1\KeepAPet.Core.pdb
+C:\HSPA\KeepAPet.Infra\obj\Debug\netcoreapp3.1\KeepAPet.Infra.csproj.AssemblyReference.cache
+C:\HSPA\KeepAPet.Infra\obj\Debug\netcoreapp3.1\KeepAPet.Infra.AssemblyInfoInputs.cache
+C:\HSPA\KeepAPet.Infra\obj\Debug\netcoreapp3.1\KeepAPet.Infra.AssemblyInfo.cs
+C:\HSPA\KeepAPet.Infra\obj\Debug\netcoreapp3.1\KeepAPet.Infra.csproj.CoreCompileInputs.cache
+C:\HSPA\KeepAPet.Infra\obj\Debug\netcoreapp3.1\KeepAPet.Infra.csproj.CopyComplete
+C:\HSPA\KeepAPet.Infra\obj\Debug\netcoreapp3.1\KeepAPet.Infra.dll
+C:\HSPA\KeepAPet.Infra\obj\Debug\netcoreapp3.1\KeepAPet.Infra.pdb

@@ -1,0 +1,95 @@
+<app-nav-bar></app-nav-bar>
+
+<!-- <ng-container *ngIf="show">
+  <div style="margin: 0 auto;text-align: left;" class="form-group">
+    <form #form="ngForm">
+
+      <div>
+        <label>Phone Number</label>
+        <div><input type="text" name="PhoneNumber" [(ngModel)]="PhoneNumber" class="form-control" ></div>
+        <div><input type="text" name="OfferId" [(ngModel)]="OfferId" value="{{OfferId}}"></div>
+
+      </div>
+      <!-- <button class="btn btn-outline-info" type="submit" (onclick)="insertRecord()"> Book </button>
+
+    </form>
+
+
+  </div>
+
+</ng-container> -->
+<div class="container" >
+<div style="margin-top: 100px;">
+
+
+<label>Filter Category: &nbsp; </label>
+<input [(ngModel)]='Name' class="form-control-sm">
+<button type="button" (click)="onFilter()" class="form-control-sm btn-success">Search</button>
+<button type="button" (click)="onFilterClear()" class="form-control-sm btn-success">Clear</button> &nbsp;
+
+<label>Sort by &nbsp;</label>
+<select [(ngModel)]='SortbyParam' class="form-control-sm">
+  <option value="NewPrice">Price</option>
+
+</select>
+<button type="button" (click)="onSortDirection()">
+  <i *ngIf="SortDirection==='asc'" class="fas fa-sort-alpha-down"></i>
+  <i *ngIf="SortDirection==='desc'" class="fas fa-sort-alpha-up"></i>
+</button>
+
+<div class="row">
+  <div *ngFor="let Offer of OfferList|filter:SearchName:'CategoryType'|sort:[SortbyParam,SortDirection]" class="col-sm-4">
+    <div class="shadow-lg p-3 mb-4">
+      <div>
+
+        <div class="card">
+          <div class="card-img-wrapper">
+            <img *ngIf="Offer.Image" class="card-img-top" src="http://localhost:5000/Photos/{{Offer.Image}}">
+            <img *ngIf="!Offer.Image" class="card-img-top" src="assets/images/clinic.jpg">
+            <ul *ngIf="!hideIcons" class="list-inline text-center member-icons animate">
+              <li class="list-inline-item">
+                <button class="btn btn-primary" (click)="insertRecord(Offer.OfferId,Offer.Image)">Book Now </button>
+
+              </li>
+
+            </ul>
+
+          </div>
+
+          <div class="card-body p-1">
+            <h3 class="mb-0">Name: {{Offer.Name}} </h3>
+
+
+              <p style="font-size: x-large;"> <span>
+                <del> {{Offer.OldPrice}}    </del><i class="fas fa-dollar-sign" style="color: red;"> </i>
+              </span>
+              <span> <i class="fas fa-arrow-right" style="color: green;"></i> </span>
+              <span>{{Offer.NewPrice}}<i
+                  class="fas fa-dollar-sign" style="color:green;"></i></span></p>
+                  <hr class="mt-0 mb-2">
+              <p style="font-size: larger;"> <span><br>Start Date : {{Offer.DateFrom}} <br>
+              </span>
+              <span> Expire in  : {{Offer.DateTo}} <i class="fas fa-smile-beam" style="color:orange;"></i></span>
+
+            </p>
+
+
+
+          </div>
+        </div>
+
+      </div>
+
+
+
+
+
+
+
+
+
+    </div>
+  </div>
+</div>
+</div>
+</div>

@@ -1,0 +1,157 @@
+  <div class="row mb-5">
+  <div class="col-8 shadow-lg p-0 bg-white">
+    <div class="card">
+      <div class="card-header">
+        <h3>Add new </h3>
+      </div>
+      <div class="card-body">
+        <form (ngSubmit)='onSubmit()' [formGroup]="addPropertyForm">
+          <div class="tab-panel">
+            <tabset class="member-tabset" #formTabs>
+              <tab heading="Basic Info" formGroupName="BasicInfo">
+                <div class="form-group col-12">
+                  <p class="display-3">Create Clinic</p>
+
+                </div>
+
+                <div class="form-group col-12">
+                  <p>Email</p>
+                  <div class="btn-group" ngControlDefault [(ngModel)]="propertyView.Email" [ngModelOptions]="{standalone:true}"
+                    name='Email'>
+
+                    <input type="text" class="form-control" required minlength="5" ngControlDefault [(ngModel)]="propertyView.Email"
+                      formControlName="Email">
+                  </div>
+                </div>
+
+
+                <div class="form-group col-12">
+                  <p>Name</p>
+                  <div class="btn-group" name='Name' [(ngModel)]="propertyView.Name" ngControlDefault
+                    [ngModelOptions]="{standalone:true}">
+                    <input type="text" class="form-control"   ngModel formControlName="Name"
+                      [(ngModel)]="propertyView.Name">
+
+                  </div>
+                </div>
+
+
+
+
+                <div class="form-group col-12">
+                  <label>Phone</label>
+                  <input type="text" required class="form-control" [(ngModel)]="propertyView.Phone"
+                    formControlName="Phone">
+                </div>
+
+                <div class="form-group col-12">
+                  <button type="button" class="btn btn-primary btn-block"  [disabled]="BasicInfo.invalid" (click)="selectTab(1)">Next</button>
+                </div>
+              </tab>
+
+
+
+              <tab heading="Address" formGroupName="AddressInfo">
+
+                <div class="form-group col-12">
+                  <label>Country</label>
+                  <input type="text" required class="form-control" [(ngModel)]="propertyView.Country"
+                    formControlName="Country">
+                </div>
+
+                <div class="form-group col-12">
+                  <label>City</label>
+                  <input type="text" required class="form-control" [(ngModel)]="propertyView.City"
+                   formControlName="City">
+                </div>
+
+                <div class="form-group col-12">
+                  <label>Street</label>
+                  <input type="text" required class="form-control" [(ngModel)]="propertyView.Street"
+                    formControlName="Street">
+                </div>
+
+                <div class="form-group col-12">
+                  <label>Building</label>
+                  <input type="text" required class="form-control" [(ngModel)]="propertyView.Building"
+                    formControlName={Building}>
+                </div>
+                <div class="form-group col-12">
+                  <label>PartmentNum</label>
+                  <input type="text" required class="form-control" [(ngModel)]="propertyView.PartmentNum"
+                    formControlName="PartmentNum">
+                </div>
+
+                <div class="form-group col-12">
+                  <button type="button" class="btn btn-primary btn-block" (click)="selectTab(2)">Next</button>
+
+                </div>
+              </tab>
+
+
+
+              <tab heading="Photos">
+                <div class="form-group col-12">
+                  <div class="photo-control">
+                    <button class="mt-5" type="button">Upload</button> <br>
+                    This is under construction
+                  </div>
+                </div>
+                <div class="form-group col-12">
+                  <button type="button" class="btn btn-primary btn-block" (click)="selectTab(1)">Back</button>
+                  <button type="submit" class="btn btn-primary btn-block">Save</button>
+                  <button type="reset" class="btn btn-primary btn-block">Cancel</button>
+                </div>
+              </tab>
+            </tabset>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="col-4">
+    <div class="card-header">
+      <h3>Your Clinic Preview</h3>
+    </div>
+    <div class="shadow-lg p-3 bg-white">
+      <div >
+
+        <div class="card" >
+          <div class="card-img-wrapper" >
+            <img *ngIf="propertyView.Image" class="card-img-top" src="assets/images/{{propertyView.Image}}">
+            <img *ngIf="!propertyView.Image" class="card-img-top" src="assets/images/clinic.jpg">
+
+
+          </div>
+          <div class="card-body p-1">
+            <h3 class="mb-0"> {{propertyView.Name}} </h3>
+
+
+            <span > Email: {{propertyView.Email}}</span>  <span><br>Phone : {{propertyView.Phone}}
+        </span>
+
+
+            <hr class="mt-0 mb-2">
+
+            <h6 class="mb-0"> <span >Location :{{propertyView.Country}}</span><span >-{{propertyView.City}}</span><br>
+              <span >{{propertyView.Street}} Street-</span><span>Building:{{propertyView.Building}}</span><span>PartmentNum:{{propertyView.PartmentNum}}  </span> </h6>
+
+        </div>
+        </div>
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+  </div>
+</div>
+

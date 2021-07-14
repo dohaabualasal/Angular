@@ -1,0 +1,48 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-3" *ngFor="let dataitem of ClinicList">
+               
+
+      <div class="shadow-lg p-3 mb-4">
+        <div >
+  
+          <div class="card" >
+            <div class="card-img-wrapper" >
+              <img *ngIf="dataitem.Image" class="card-img-top" src="http://localhost:5000/Photos/{{dataitem.Image}}">
+              <img *ngIf="!dataitem.Image" class="card-img-top" src="assets/images/clinic.jpg">
+             
+  
+            </div>
+            <div class="card-body p-1">
+              <h3 class="mb-0"> {{dataitem.Name}} </h3>
+  
+  
+              <span > Email: {{dataitem.email}}</span>  <span><br>Phone : {{dataitem.Phone}}
+          </span>
+  
+  
+              <hr class="mt-0 mb-2">
+  
+              <h6 class="mb-0"> <span >Location :{{dataitem.Country}}</span><span >-{{dataitem.City}}</span><br>
+                <span >{{dataitem.Street}} Street-</span><span>Building:{{dataitem.Building}}</span><span>PartmentNum:{{dataitem.PartmentNum}}  </span> </h6>
+  
+          </div>
+          </div>
+  
+          </div>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+      </div>
+  </div>
+  </div>
+            </div>
+        </div>
+  

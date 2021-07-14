@@ -1,0 +1,124 @@
+<div class="main-content">
+  <div class="container-fluid">
+    
+   
+      <div class="row">
+          
+          <div class="container" >
+             
+<div class="row mb-5">
+  <div class="col-8 shadow-lg p-0 bg-white">
+
+
+      <div class="card-body">
+
+  <input type="hidden"  >
+  <div class="ml-3 bd-highlight" style="width: 40%;">
+    <label>Image </label>
+    <!-- <img [src]=PhotoFilePath height="250px;" width="200px;"> -->
+    <input type="file"  (change)="uploadPhoto($event)" class="btn-default" />
+  </div>
+<div class="form-group col-md-6">
+      <label>FULL NAME</label>
+      <input     [(ngModel)]="propertyView.Name" class="form-control" required  [(ngModel)]="Name">
+     </div>
+  <div class="form-row">
+
+    <div class="form-group  col-md-6">
+      <label>Email</label>
+      <input  type="email"    [(ngModel)]="propertyView.Email" [(ngModel)]="Email" required class="form-control">
+
+    </div>
+    <div class="form-group  col-md-6">
+      <label>Phone</label>
+      <input   type="number" [(ngModel)]="propertyView.Phone" [(ngModel)]="Phone" required class="form-control">
+     </div>
+    <div class="form-row">
+
+    <div class="form-group col-md-6">
+      <label>Country</label>
+      <input   type="text" value=""  [(ngModel)]="propertyView.Country" [(ngModel)]="Country" required class="form-control">
+    </div>
+    <div class="form-group  col-md-6">
+      <label>City</label>
+      <input name="City" type="text"    required class="form-control" [(ngModel)]="propertyView.City" [(ngModel)]="City" >
+     </div>
+    </div>
+    <div class="form-row">
+    <div class="form-group  col-md-6">
+      <label>Street</label>
+      <input name="Street" type="text"    required class="form-control" [(ngModel)]="propertyView.Street" [(ngModel)]="Street">
+     </div>
+    <div class="form-group  col-md-6">
+      <label>Building</label>
+      <input name="Building" type="text"   required class="form-control" [(ngModel)]="propertyView.Building" [(ngModel)]="Building">
+     </div>
+    </div>
+    <div class="form-row">
+    <div class="form-group  col-md-6">
+      <label>Partment Number</label>
+      <input  type="number"    required class="form-control" [(ngModel)]="propertyView.PartmentNum"  [(ngModel)]="PartmentNum">
+     </div>
+
+    </div>
+
+
+  </div>
+  <div class="form-group">
+    <button type="submit" (click)="addClinic()"  class="btn btn-success">SUBMIT</button>
+  </div>
+
+</div>
+</div>
+<div class="col-4">
+  <div class="card-header">
+    <h3>Your Clinic Preview</h3>
+  </div>
+  <div class="shadow-lg p-3 bg-white">
+    <div >
+
+      <div class="card" >
+        <div class="card-img-wrapper" >
+          <img  class="card-img-top" [src]=PhotoFilePath >
+          <!-- <img  class="card-img-top" src="assets/images/clinic.jpg"> -->
+
+
+        </div>
+        <div class="card-body p-1">
+          <h3 class="mb-0"> {{propertyView.Name}} </h3>
+
+
+          <span > Email: {{propertyView.Email}}</span>  <span><br>Phone : {{propertyView.Phone}}
+      </span>
+
+
+          <hr class="mt-0 mb-2">
+
+          <h6 class="mb-0"> <span >Location :{{propertyView.Country}}</span><span >-{{propertyView.City}}</span><br>
+            <span >{{propertyView.Street}} Street-</span><span>Building:{{propertyView.Building}}</span><span>PartmentNum:{{propertyView.PartmentNum}}  </span> </h6>
+
+      </div>
+      </div>
+
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+</div>
+</div>
+             
+          </div>
+      </div>
+  </div>
+</div>
+
+

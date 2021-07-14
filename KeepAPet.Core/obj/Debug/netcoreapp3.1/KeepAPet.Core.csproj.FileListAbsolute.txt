@@ -1,0 +1,9 @@
+C:\HSPA\KeepAPet.Core\bin\Debug\netcoreapp3.1\KeepAPet.Core.deps.json
+C:\HSPA\KeepAPet.Core\bin\Debug\netcoreapp3.1\KeepAPet.Core.dll
+C:\HSPA\KeepAPet.Core\bin\Debug\netcoreapp3.1\KeepAPet.Core.pdb
+C:\HSPA\KeepAPet.Core\obj\Debug\netcoreapp3.1\KeepAPet.Core.csproj.AssemblyReference.cache
+C:\HSPA\KeepAPet.Core\obj\Debug\netcoreapp3.1\KeepAPet.Core.AssemblyInfoInputs.cache
+C:\HSPA\KeepAPet.Core\obj\Debug\netcoreapp3.1\KeepAPet.Core.AssemblyInfo.cs
+C:\HSPA\KeepAPet.Core\obj\Debug\netcoreapp3.1\KeepAPet.Core.csproj.CoreCompileInputs.cache
+C:\HSPA\KeepAPet.Core\obj\Debug\netcoreapp3.1\KeepAPet.Core.dll
+C:\HSPA\KeepAPet.Core\obj\Debug\netcoreapp3.1\KeepAPet.Core.pdb

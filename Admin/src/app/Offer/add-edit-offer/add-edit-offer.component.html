@@ -1,0 +1,169 @@
+<div class="row mb-5">
+  <div class="col-8 shadow-lg p-0 bg-white">
+
+
+    <div class="card-body">
+      <label>Image</label>
+      <div class="ml-3 bd-highlight" style="width: 40%;">
+        <!-- <img [src]=PhotoFilePath height="250px;" width="200px;"> -->
+        <input type="file"  (change)="uploadPhoto($event)" class="mt-2" />
+      </div>
+      <label>Name</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" [(ngModel)]="Name" placeholder="Enter"    [(ngModel)]="propertyView.Name">
+      </div>
+      <div class="col-sm-10">
+        Old Price
+        <input type="number" class="form-control" [(ngModel)]="OldPrice" placeholder="Enter old  Price"
+          [(ngModel)]="propertyView.OldPrice">
+      </div>
+      <div class="col-sm-10">
+        New  price 
+        <input type="number" class="form-control" [(ngModel)]="NewPrice" [(ngModel)]="propertyView.NewPrice"
+          placeholder="Ente New Price">
+      </div>
+      <div class="col-sm-10">
+        Date From
+        <input type="date" class="form-control" [(ngModel)]="DateFrom" placeholder="DateFrom" [(ngModel)]="propertyView.DateFrom">
+      </div>
+      <div class="col-sm-10">
+        DateTo
+        <input type="date" class="form-control" [(ngModel)]="DateTo" placeholder="DateTo" [(ngModel)]="propertyView.DateTo">
+      </div>
+      <label class="col-sm-2 col-form-label">Category</label>
+      <div class="col-sm-10">
+        <select class="form-control" [(ngModel)]="Categories" (change)="selectChange()" >
+          <option>--Select--</option>
+          <option *ngFor="let depName of Categories" [value]="depName.CategoryType" >
+            {{depName.CategoryType}}
+          </option>
+        </select>
+
+      </div>
+<!--
+      <label class="col-sm-2 col-form-label">Gender</label>
+      <div class="form-group">
+        <input type="text" class="form-control" [(ngModel)]="Gender" [(ngModel)]="propertyView.Gender">
+      </div> -->
+
+
+  
+
+
+
+  <button  (click)="addOffer()" class="btn btn-primary">
+    Add
+  </button>
+</div>
+</div>
+<div class="col-4">
+  <div class="card-header">
+    <h3>Your Pet Preview</h3>
+  </div>
+  <div class="shadow-lg p-3 bg-white">
+    <div>
+
+      <div class="card">
+        <div class="card-img-wrapper">
+          <img class="card-img-top" [src]=PhotoFilePath >
+
+
+        </div>
+        <div class="card-body p-1">
+          <h3 class="mb-0"> Name :{{propertyView.Name}} </h3>
+
+
+          <span> NewDateFrom: {{propertyView.NewDateFrom}}</span> <span><br>Gender : {{propertyView.Gender}}
+          </span>
+          <br>
+          <span> OldDateFrom: {{propertyView.OldDateFrom}}</span> <span><br>
+          </span>
+
+
+          <hr class="mt-0 mb-2">
+
+
+        </div>
+      </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+</div>
+</div>
+
+
+
+<div class="col-md-7">
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Edit</h5>
+          <button type="button" class="close"
+          data-dismiss="modal" aria-label="Close"
+          (click)="closeClick()" >
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <app-EditOffer [emp]="emp" *ngIf="ActivateAddEditEmpComp">
+            </app-EditOffer>
+        </div>
+      </div>
+    </div>
+  </div>
+  <table class="table table-hover">
+    <thead>
+      <th>Id</th>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Phone</th>
+      <th>Rate</th>
+      <th></th>
+
+    </thead>
+    <tbody>
+
+
+
+    <tr *ngFor="let emp of OfferList">
+      <td (click)="populateForm(emp)">{{emp.Id}}
+
+      <td (click)="populateForm(emp)">{{emp.Name}}</td>
+      <td (click)="populateForm(emp)">{{emp.OldPrice}}</td>
+
+      <td (click)="populateForm(emp)">{{emp.NewPrice}}</td>
+      <td (click)="populateForm(emp)">{{emp.DateFrom}}</td>
+      <td><button (click)="editClick(emp)" class="btn btn-sm btn-outline-info">Update</button></td>
+
+
+      <td><button (click)="onDelete(emp.Id)" class="btn btn-sm btn-outline-danger">Delete</button></td>
+
+    </tr>
+  </tbody>
+  </table>
+
+
+    </div>
+
+
+
+
+
+
+
+

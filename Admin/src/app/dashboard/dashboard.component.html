@@ -1,0 +1,33 @@
+<div class="container">
+
+<div class="main-content">
+  <div class="container">
+    <div *ngIf="AddClinic==true">
+        <app-Clinic></app-Clinic>
+    </div>
+   
+      <div class="row" style="font-size: large;">
+          
+          <div class="container" >
+              <div class="card">
+                  <div class="card-header card-header-success">
+                      <h4 class="card-title">Clinics</h4>  
+                      <div>
+                          <button (click)="addClinic()" class="btn btn-white"> Add clinic </button>
+                      </div>
+                  </div>
+                  <div class="card-body table-responsive">
+                   
+                    <app-list-clinic></app-list-clinic>
+                    
+
+                  </div>
+              </div>
+             
+          </div>
+      </div>
+  </div>
+</div>
+
+</div>
+
